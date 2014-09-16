@@ -1,0 +1,37 @@
+/* 
+Base Rules
+	A Base rule is applied to an element using an element selector, a descendent selector, or a child selector, along with any pseudoclasses. It doesn’t include any class or ID selectors. It is defining the default styling for how that element should look in all occurrences on the page.
+*/
+
+body {
+    color: $color;
+    @include body-font-regular;
+    @include fontSize(20px);
+    line-height: 1.45;
+    margin: 20px auto;
+    max-width: 550px;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @include headline-font;
+    line-height: 1;
+}
+
+h1 {
+    @include fontSize(60px);
+    margin-bottom: 84px;
+    text-transform: capitalize;
+}
+
+//p:first-of-type {
+//    @include fontSize(30px);
+//}
+
+//p:first-child {
+//    @include fontSize(30px);
+//}
+
+//h1 + p {
+//   @include fontSize(24px);
+//}
