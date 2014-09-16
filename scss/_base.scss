@@ -24,14 +24,89 @@ h1 {
     text-transform: capitalize;
 }
 
+        
 //p:first-of-type {
-//    @include fontSize(30px);
+    //@include fontSize(30px);
 //}
 
 //p:first-child {
-//    @include fontSize(30px);
+    //@include fontSize(30px);
 //}
 
-//h1 + p {
-//   @include fontSize(24px);
-//}
+h1 + p {
+    @include fontSize(30px);
+}
+h2 {
+    @include fontSize(44px);
+    margin-top: 50px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+h2 + p {
+    margin-top: 0;
+}
+
+h3 {
+    @include fontSize(34px);
+    margin-top: 34px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+h3 + p {
+    margin-top: 0;
+}
+
+h4 {
+    @include fontSize(24px);
+    margin-top: 34px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+h4 + p {
+    margin-top: 0;
+}
+
+i, em {
+    @include body-font-italic;
+}
+b, strong {
+    @include body-font-bold;
+}
+
+a {
+    background-color: $background-color;
+    border-radius: 4px;
+    color: $color;
+    @include body-font-italic;
+    padding: 0  4px 2px 4px;
+    //padding: top right bottom left;
+    transition: background-color 300ms linear;
+    transition: color 300ms linear;
+}
+
+a:hover {
+    background-color:lighten($background-color, 5%);
+    color: lighten($color, 40%);
+    transition: background-color 300ms linear;
+    transition: color 300ms linear;
+}
+
+ul {
+    margin: 0 0 0 22px;
+    padding: 0;
+    //list-style-type: none;
+}
+
+ul li {
+    //background-color: pink;
+    //margin-bottom: 40px;
+}
+
+
+
+p + ul {
+    margin-top: -18px;   
+}
